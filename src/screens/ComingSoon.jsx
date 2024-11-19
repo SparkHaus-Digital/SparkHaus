@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import '../css/comingSoon.css';
+import '../css/ComingSoon.css';
 import logo from '../assets/Sparkhaus-W.png';
 import topArrow from '../assets/top-right.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
