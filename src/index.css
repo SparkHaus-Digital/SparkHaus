@@ -14,7 +14,7 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
 
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 
   /* Radial glowing effect */
