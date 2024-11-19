@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/coming-soon" />} />
+        <Route path="/" element={<ComingSoon/>} />
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to="/404" />} />
