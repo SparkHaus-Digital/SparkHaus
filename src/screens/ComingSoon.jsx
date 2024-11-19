@@ -47,7 +47,6 @@ const ComingSoon = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="book-call-button"
             >
               BOOK A CALL
               <img src={topArrow} alt="arrow" className="arrow" />

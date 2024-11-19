@@ -4,7 +4,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     gap: 8rem;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .comingsoon-content button:hover .arrow {
-    content: url('../assets/right-arrow.png'); /* Swap the image */
+    content: url('../assets/right-arrow.png'); 
     transform: scale(1.2);
 }
 
@@ -80,7 +80,6 @@ a {
     width: 100%;
     color: white;
 }
-
 
 
 
