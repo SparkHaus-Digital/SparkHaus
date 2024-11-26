@@ -24,14 +24,16 @@ const ComingSoon = () => {
   };
 
   return (
-    <div className="comingsoon-container" style={{ position: 'relative' }}>
-            <BackgroundCanvas />
+    
+           
     <motion.div
       initial="hidden"
       animate="visible"
       variants={staggerContainer}
       className="comingsoon-container"
     >
+      
+    <BackgroundCanvas/>
       
       <motion.div variants={fadeIn} className="logo-container">
         <img src={logo} alt="Logo" />
@@ -103,7 +105,7 @@ const ComingSoon = () => {
         </div>
       </motion.div>
     </motion.div>
-    </div>
+    
   );
 };
 
