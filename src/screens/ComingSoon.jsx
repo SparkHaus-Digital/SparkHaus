@@ -4,6 +4,8 @@ import '../css/ComingSoon.css';
 import logo from '../assets/Sparkhaus-W.png';
 import topArrow from '../assets/top-right.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import BackgroundCanvas from './BackgroundCanvas';
+
 import {
   faFacebook,
   faInstagram,
@@ -22,6 +24,8 @@ const ComingSoon = () => {
   };
 
   return (
+    <div className="comingsoon-container" style={{ position: 'relative' }}>
+            <BackgroundCanvas />
     <motion.div
       initial="hidden"
       animate="visible"
@@ -99,6 +103,7 @@ const ComingSoon = () => {
         </div>
       </motion.div>
     </motion.div>
+    </div>
   );
 };
 
