@@ -4,7 +4,7 @@ import '../css/ComingSoon.css';
 import logo from '../assets/Sparkhaus-W.png';
 import topArrow from '../assets/top-right.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import BackgroundCanvas from './BackgroundCanvas';
+import BackgroundCanvas2 from './BackgroundCanvas2';
 
 import {
   faFacebook,
@@ -33,7 +33,7 @@ const ComingSoon = () => {
       className="comingsoon-container"
     >
       
-    <BackgroundCanvas/>
+    <BackgroundCanvas2/>
       
       <motion.div variants={fadeIn} className="logo-container">
         <img src={logo} alt="Logo" />
