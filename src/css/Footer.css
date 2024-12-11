@@ -1,0 +1,81 @@
+.contact-section {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem
+  }
+  
+  .contact-heading {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .contact-subheading {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-button {
+    padding: 5px 15px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid white;
+  }
+
+  .footer-button:hover {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+  
+  .footer-button:hover .arrow {
+    content: url('../assets/right-arrow.png');
+    
+  }
+
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 60%; 
+    margin-top: 3rem;
+  }
+  
+  .email-div {
+    flex: 1; 
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    
+  }
+
+  .email-subdiv{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .icons-div {
+    display: flex;
+    justify-content: center; 
+    flex: 1; 
+    gap: 1rem; 
+  }
+  
+  .contact-number-div {
+    flex: 1; 
+    display: flex;
+    justify-content: right;
+    gap: 5px;
+  }
+  

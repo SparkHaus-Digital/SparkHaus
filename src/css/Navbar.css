@@ -1,0 +1,147 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #d9d9d918, transparent);
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 1px solid #3d42559a;
+  color: white;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-logo {
+  width: 8vw;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-item a {
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  font-weight: normal;
+}
+
+.navbar-item a:hover {
+  color: rgb(68, 68, 68);
+}
+
+.navbar-button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Cross Animation */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; 
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  .navbar-logo {
+    width: 25%;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-button {
+    display: none;
+  }
+
+  .navbar-links {
+    position: fixed; 
+    top: 100px;
+    right: 0;
+    width: 30%; 
+    background: linear-gradient(to right, #d9d9d918, transparent);
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+    text-align: right;
+    padding: 2rem;
+    border-radius: 10px 0 0 10px; 
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+    z-index: 20; 
+    opacity: 0; 
+    pointer-events: none; 
+  }
+
+  .navbar-links.active {
+    visibility: visible; 
+    opacity: 1; 
+    transform: translateX(0); 
+    pointer-events: auto;
+  }
+
+  .navbar-links.closing {
+    opacity: 0; 
+    transform: translateX(100%); 
+    pointer-events: none; 
+  }
+
+  .navbar-item a {
+    color: white; 
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  .navbar-item a:hover {
+    color: rgb(68, 68, 68);
+  }
+}

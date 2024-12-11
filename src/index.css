@@ -1,5 +1,6 @@
 * {
   margin: 0;  padding: 0;
+
 }
 
 html {
@@ -27,9 +28,13 @@ body {
 span, p {
   font-family: 'Syne', sans-serif;
 }
+
+button {
+  font-family: 'Bebas Neue', sans-serif;
+}
 }
 
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
   body {
     background: 
     radial-gradient(circle 600px at right, #0e2686e6,  transparent 60%), 
@@ -37,4 +42,4 @@ span, p {
 
     background-color: black; 
   }
-}
+} */
