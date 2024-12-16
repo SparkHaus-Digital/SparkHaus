@@ -89,10 +89,10 @@ const BookACall = () => {
 	return (
 		<div className="book-a-call">
 			<form className="form-container" onSubmit={handleSubmit}>
-				<h1>
+				<h2>
 					Let us know <br />
 					about your idea
-				</h1>
+				</h2>
 				<p>
 					It would be awesome to know more about you before we hop on that call.
 				</p>
