@@ -1,0 +1,74 @@
+.service-container {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    background: linear-gradient(to right, #e0dddd, #000000, #000000, #001f4d);
+    padding: 0 1rem;
+  }
+  
+  /* Hero Section */
+  .service-hero {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  
+  .service-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .service-hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  
+  /* Service Cards */
+  .service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffffff48;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+  }
+  
+  .service-card h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-card p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+  }
+  
+  .service-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .service-details div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-details h4 {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0; 
+    text-transform: uppercase;
+  }
+  
+  .service-details p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+    padding: 0; 
+  }
+  
+  
