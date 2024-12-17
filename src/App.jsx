@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
+
 import ComingSoon from './screens/ComingSoon';
 import BookACall from './screens/BookACall';
 import Error from './screens/Error';
 import AboutUs from './screens/AboutUs';
+import Portfolio from './screens/Portfolio';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -21,6 +23,7 @@ function App() {
         <Route path="*" element={<Navigate to="/404" />} />
         <Route path='/book-a-call' element={<BookACall/>} /> 
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
       <Footer />
     </Router>

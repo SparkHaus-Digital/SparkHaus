@@ -19,11 +19,86 @@ body {
   position: relative;
 
   /* Radial glowing effect */
-  background: 
+  /* background: 
     radial-gradient(circle 900px at right, #0e2686,  transparent 60%), 
-    radial-gradient(circle 900px at bottom left, #c0c0c09d, transparent 70%);
+    radial-gradient(circle 900px at bottom left, #c0c0c09d, transparent 70%); */
+
+  background: 
+    radial-gradient(circle 1000px at 100% 10%, #0e2686,  transparent 60%),
+    radial-gradient(circle 800px at 0% 40%, #c0c0c09d,  transparent 60%),
+    radial-gradient(circle 800px at 100% 100%, #c0c0c09d,  transparent 60%),
+    radial-gradient(circle 1000px at 0% 90%, #0e2686,  transparent 60%);
+  
   background-color: black; 
 
+}
+
+/* body::before, body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+} */
+
+/* Dot pattern for blue gradients */
+/* body::before {
+  background-image: radial-gradient(circle, rgb(255, 255, 255) 1px, transparent 1px);
+  background-size: 40px 40px; 
+  mix-blend-mode: overlay; 
+  opacity: 0.4;
+  z-index: -1;
+} */
+
+/* Line pattern for ash-colored gradients */
+/* body::after {
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255) 1px, transparent 1px);
+  background-size: 100% 20px; 
+  mix-blend-mode: overlay; 
+  opacity: 0.3;
+  z-index: -1;
+} */
+
+
+body::before, body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Dots for blue gradients */
+body::before {
+  background: radial-gradient(circle, rgb(255, 255, 255) 1px, transparent 1px);
+  background-size: 40px 40px; /* Spacing between dots */
+  mask-image: radial-gradient(circle 1000px at 100% 10%, black, transparent 60%), /* Top-right blue */
+              radial-gradient(circle 1000px at 0% 90%, black, transparent 60%);  /* Bottom-left blue */
+  -webkit-mask-image: radial-gradient(circle 1000px at 100% 10%, black, transparent 60%),
+                      radial-gradient(circle 1000px at 0% 90%, black, transparent 60%);
+  mix-blend-mode: overlay;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* Vertical lines for ash gradients */
+body::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.151) 1px, transparent 1px);
+  background-size: 40px 100%; /* Vertical lines spacing */
+  mask-image: radial-gradient(circle 800px at 0% 40%, black, transparent 60%), /* Top-left ash */
+              radial-gradient(circle 800px at 100% 100%, black, transparent 60%); /* Bottom-right ash */
+  -webkit-mask-image: radial-gradient(circle 800px at 0% 40%, black, transparent 60%),
+                      radial-gradient(circle 800px at 100% 100%, black, transparent 60%);
+  mix-blend-mode: overlay;
+  opacity: 0.8;
+  z-index: -1;
+}
 
 span, p {
   font-family: 'Syne', sans-serif;
@@ -31,7 +106,6 @@ span, p {
 
 button {
   font-family: 'Bebas Neue', sans-serif;
-}
 }
 
 h1 {
