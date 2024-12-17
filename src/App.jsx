@@ -5,7 +5,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import ComingSoon from './screens/ComingSoon';
 import Error from './screens/Error';
-import './index.css';
+//import './index.css';
 
 function App() {
   return (
