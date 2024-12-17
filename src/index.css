@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;  padding: 0;
 }
 
@@ -18,7 +18,7 @@ body {
   position: relative;
 
   /* Radial glowing effect */
-  background: 
+  /* background: 
     radial-gradient(circle 900px at right, #0e2686,  transparent 60%), 
     radial-gradient(circle 900px at bottom left, #c0c0c09d, transparent 70%);
   background-color: black; 
@@ -37,4 +37,4 @@ span, p {
 
     background-color: black; 
   }
-}
+} */ 
