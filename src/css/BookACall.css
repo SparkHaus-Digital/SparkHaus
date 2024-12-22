@@ -125,3 +125,51 @@
 		transform: translateY(0);
 	}
 }
+
+
+
+@media (max-width: 479px) {
+    .form-container {
+		max-width: 70vw;
+	}
+
+	.form-container p {
+		margin-top: 1rem;
+		margin-bottom: 5rem;
+	}
+
+	.form-input {
+		padding: 0.5rem 0;
+		padding-left: 0.5rem;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	.form-container {
+		max-width: 70vw;
+	}
+
+	.form-container p {
+		margin-top: 1rem;
+		margin-bottom: 5rem;
+	}
+
+	.form-input {
+		padding: 0.5rem 0;
+		padding-left: 0.5rem;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.form-container {
+		max-width: 40vw;
+	}
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.form-container {
+		max-width: 30vw;
+	}
+}

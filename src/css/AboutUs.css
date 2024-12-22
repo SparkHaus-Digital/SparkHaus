@@ -89,3 +89,63 @@
 .team-member span:nth-child(3) {
     margin-top: 0.2rem;
 }
+
+
+@media (max-width: 479px) {
+    .stats-container {
+		flex-direction: column;
+		margin-top: 8rem;
+	}
+
+	.stat-item h2 {
+		font-size: 4rem;
+	}
+
+	.team-members {
+		flex-direction: column;
+	}
+
+	.team-member {
+		width: 100%;
+	}
+
+	.team-member img {
+		width: 250px;
+		height: 250px;
+	}
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	.stats-container {
+		flex-direction: column;
+		margin-top: 8rem;
+	}
+
+	.stat-item h2 {
+		font-size: 4rem;
+	}
+
+	.team-members {
+		flex-direction: column;
+	}
+
+	.team-member {
+		width: 100%;
+	}
+
+	.team-member img {
+		width: 250px;
+		height: 250px;
+	}
+}
+
+/* 
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+} */

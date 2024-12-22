@@ -10,12 +10,16 @@
   margin-top: 2rem;
   margin-left: 5rem;
   margin-right: 5rem;
-  position: relative;
+  position: sticky; 
+  top: 2rem; 
   z-index: 10;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
 }
 
 .navbar-logo {
   width: 8vw;
+  pointer-events: auto;
 }
 
 .navbar-links {
@@ -31,6 +35,7 @@
   text-transform: uppercase;
   transition: color 0.3s;
   font-weight: normal;
+  z-index: 1; 
 }
 
 .navbar-item a:hover {
@@ -44,6 +49,14 @@
   background: white;
   color: black;
   cursor: pointer;
+  transition: background-color 0.6s ease;
+  border: 1px solid white;
+}
+
+.navbar-button:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
 }
 
 .hamburger {
@@ -58,14 +71,13 @@
 
 .hamburger div {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background-color: white;
   transition: all 0.3s ease-in-out;
 }
 
-/* Cross Animation */
 .hamburger.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(7px, 6px); 
 }
 
 .hamburger.active div:nth-child(2) {
@@ -73,29 +85,52 @@
 }
 
 .hamburger.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -5px); 
+}
+
+.hamburger-icon {
+  font-size: 20px;
+  color: white;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.mobile-only {
+  display: none; 
+}
+
+.desktop-only {
+  display: block;
 }
 
 
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden; 
-  }
 
   .navbar {
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-left: 0;
     margin-right: 0;
     padding: 10px 15px;
-    position: relative;
   }
 
+  .mobile-only {
+    display: block; /* Visible in mobile view */
+}
+
+.desktop-only {
+    display: none; /* Hidden in mobile view */
+}
+
   .navbar-logo {
-    width: 25%;
+    width: 80px;
   }
 
   .hamburger {
     display: flex;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
   }
 
   .navbar-button {
@@ -103,42 +138,48 @@
   }
 
   .navbar-links {
-    position: fixed; 
-    top: 100px;
-    right: 0;
-    width: 30%; 
-    background: linear-gradient(to right, #d9d9d918, transparent);
+    position: absolute;
+    top: 110%; 
+    left: 0;
+    width: 100%; 
+    background: linear-gradient(to top, #d9d9d932, transparent);
+    background-color: #000000e4;
+    display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 1rem;
-    text-align: right;
-    padding: 2rem;
-    border-radius: 10px 0 0 10px; 
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
-    z-index: 20; 
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    max-height: 0; 
     opacity: 0; 
-    pointer-events: none; 
+    visibility: hidden; 
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    justify-content: space-between;
   }
+  
 
   .navbar-links.active {
-    visibility: visible; 
+    max-height: 200px; 
     opacity: 1; 
-    transform: translateX(0); 
-    pointer-events: auto;
+    visibility: visible; 
   }
 
   .navbar-links.closing {
+    max-height: 0;
     opacity: 0; 
-    transform: translateX(100%); 
-    pointer-events: none; 
+    visibility: hidden; 
   }
 
   .navbar-item a {
-    color: white; 
+    color: white;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
+    z-index: 1; 
   }
 
   .navbar-item a:hover {

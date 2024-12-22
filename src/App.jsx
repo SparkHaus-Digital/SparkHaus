@@ -12,10 +12,17 @@ import Footer from './components/Footer';
 
 import './index.css';
 
+import Snowfall from 'react-snowfall';
+
 function App() {
   return (
     <Router>
       <Navbar />
+      {/* <Snowfall 
+        snowflakeCount={100} 
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 999 }} 
+        snowflakeSpeed={0.1} 
+      /> */}
       <Routes>
         <Route path="/" element={<Navigate to="/coming-soon" />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
