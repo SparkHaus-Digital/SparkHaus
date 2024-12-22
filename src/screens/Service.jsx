@@ -6,24 +6,6 @@ import topRightIcon from "../assets/top-right.png";
 const Service = () => {
   return (
     <div className="service-container">
-      {/* Navbar */}
-      <header className="navbar">
-        {/* Logo */}
-        <a href="#" className="navbar-brand">
-          SPARKHAUS
-        </a>
-
-        {/* Navigation Links */}
-        <nav className="navbar-links">
-            <Link to="/services">Services</Link>
-            <Link to="/">Home</Link>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-        </nav>
-
-        {/* CTA Button */}
-        <a href="#contact" className="navbar-cta">Book a Call</a>
-      </header>
 
       {/* Hero Section */}
       <section className="service-hero">
@@ -142,14 +124,6 @@ const Service = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-              <section className="contact">
-              <h2>Speak with us if you'd like to tell your story</h2>
-              <p>Seems intriguing? Hop on that call</p>
-              <button className="get-in-touch">Get in Touch <img src={topRightIcon} alt="arrow icon" className="icon" /></button>
-              </section>
-
-      {/* Footer */}
       
     </div>
   );

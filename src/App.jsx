@@ -12,7 +12,6 @@ import AboutUs from './screens/AboutUs';
 import Portfolio from './screens/Portfolio';
 
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 
 import './index.css';
 
