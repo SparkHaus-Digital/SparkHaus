@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import emailjs from 'emailjs-com'; 
+import emailjs from 'emailjs-com';
 import '../css/BookACall.css';
 import topArrow from '../assets/top-right.png';
 
@@ -27,7 +27,6 @@ const BookACall = () => {
 		}
 
 		window.scrollTo(0, 0);
-		
 	}, [name, email]);
 
 	const validateForm = () => {
@@ -53,7 +52,7 @@ const BookACall = () => {
 			company_name: companyName,
 			company_url: companyUrl,
 			services_required: servicesRequired,
-			budget: budget
+			budget: budget,
 		};
 
 		emailjs
@@ -61,13 +60,13 @@ const BookACall = () => {
 				'service_jggkjvg', // EmailJS service ID
 				'template_t3ijq6u', // EmailJS template ID
 				templateParams,
-				'b-jPBYEoVU_G3vccU' 
+				'b-jPBYEoVU_G3vccU'
 			)
 			.then(
 				(response) => {
 					console.log('SUCCESS!', response.status, response.text);
 					alert('Your call request has been sent successfully!');
-					
+
 					setName('');
 					setEmail('');
 					setCompanyName('');
@@ -88,7 +87,7 @@ const BookACall = () => {
 
 	return (
 		<div className="book-a-call">
-			<form className="form-container" onSubmit={handleSubmit}>
+			<div className="book-a-call-header">
 				<h2>
 					Let us know <br />
 					about your idea
@@ -96,7 +95,8 @@ const BookACall = () => {
 				<p>
 					It would be awesome to know more about you before we hop on that call.
 				</p>
-
+			</div>
+			<form className="form-container" onSubmit={handleSubmit}>
 				<div className="row">
 					<span>Name</span>
 					<input
@@ -106,10 +106,12 @@ const BookACall = () => {
 							setName(e.target.value);
 							handleInputChange();
 						}}
-						className={`form-input ${errors.name ? 'error' : ''}`} 
+						className={`form-input ${errors.name ? 'error' : ''}`}
 						required
 					/>
-					{errors.name && <small className="error-message">{errors.name}</small>}
+					{errors.name && (
+						<small className="error-message">{errors.name}</small>
+					)}
 				</div>
 
 				<div className="row">
@@ -121,39 +123,43 @@ const BookACall = () => {
 							setEmail(e.target.value);
 							handleInputChange();
 						}}
-						className={`form-input ${errors.email ? 'error' : ''}`} 
-						required						
+						className={`form-input ${errors.email ? 'error' : ''}`}
+						required
 					/>
-					{errors.email && <small className="error-message">{errors.email}</small>}
+					{errors.email && (
+						<small className="error-message">{errors.email}</small>
+					)}
 				</div>
 
 				<div className={`additional-fields ${isDetailsVisible ? 'show' : ''}`}>
 					<div className="row">
 						<span>Company Name</span>
-						<input 
-							type="text" 
-							value={companyName} 
-							onChange={(e) => setCompanyName(e.target.value)} 
-							className={`form-input ${errors.companyName ? 'error' : ''}`} 
+						<input
+							type="text"
+							value={companyName}
+							onChange={(e) => setCompanyName(e.target.value)}
+							className={`form-input ${errors.companyName ? 'error' : ''}`}
 							required
 						/>
-						{errors.companyName && <small className="error-message">{errors.companyName}</small>}
+						{errors.companyName && (
+							<small className="error-message">{errors.companyName}</small>
+						)}
 					</div>
 					<div className="row">
 						<span>Company URL</span>
-						<input 
-							type="url" 
-							value={companyUrl} 
-							onChange={(e) => setCompanyUrl(e.target.value)} 
-							className="form-input fade-in" 
+						<input
+							type="url"
+							value={companyUrl}
+							onChange={(e) => setCompanyUrl(e.target.value)}
+							className="form-input fade-in"
 						/>
 					</div>
 					<div className="row">
 						<span>Services Required</span>
-						<select 
-							value={servicesRequired} 
-							onChange={(e) => setServicesRequired(e.target.value)} 
-							className={`form-input ${errors.servicesRequired ? 'error' : ''}`} 
+						<select
+							value={servicesRequired}
+							onChange={(e) => setServicesRequired(e.target.value)}
+							className={`form-input ${errors.servicesRequired ? 'error' : ''}`}
 							required
 						>
 							<option value="">Select Service</option>
@@ -161,22 +167,26 @@ const BookACall = () => {
 							<option value="development">Development</option>
 							<option value="marketing">Marketing</option>
 						</select>
-						{errors.servicesRequired && <small className="error-message">{errors.servicesRequired}</small>}
+						{errors.servicesRequired && (
+							<small className="error-message">{errors.servicesRequired}</small>
+						)}
 					</div>
 					<div className="row">
 						<span>Budget</span>
-						<select 
-							value={budget} 
-							onChange={(e) => setBudget(e.target.value)} 
-							className={`form-input ${errors.budget ? 'error' : ''}`} 
-							required 
+						<select
+							value={budget}
+							onChange={(e) => setBudget(e.target.value)}
+							className={`form-input ${errors.budget ? 'error' : ''}`}
+							required
 						>
 							<option value="">Select Budget</option>
 							<option value="under_5k">Under $5k</option>
 							<option value="5k_10k">$5k - $10k</option>
 							<option value="over_10k">Over $10k</option>
 						</select>
-						{errors.budget && <small className="error-message">{errors.budget}</small>}
+						{errors.budget && (
+							<small className="error-message">{errors.budget}</small>
+						)}
 					</div>
 
 					<button type="submit" className="submit-button fade-in">
