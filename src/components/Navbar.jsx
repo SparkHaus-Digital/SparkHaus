@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../css/Navbar.css';
-import sparkhausLogo from '../assets/sparkhaus-Horizontal1.png';
+import sparkhausLogo from '../assets/sparkhaus-Horizontal2.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -25,7 +25,8 @@ const Navbar = () => {
     }, [menuOpen]);
 
     return (
-        <nav className="navbar" ref={navRef}>
+        <nav className={`navbar ${menuOpen ? 'navbar-open' : ''}`}
+        ref={navRef}>
             <Link to="/" className="navbar-logo-container">
                 <img src={sparkhausLogo} className="navbar-logo" alt="logo" />
             </Link>
@@ -55,8 +56,8 @@ const Navbar = () => {
                         Portfolio
                     </Link>
                 </li>
-                <li className="navbar-item mobile-only">
-                    <Link to="/book-a-call" onClick={() => setMenuOpen(false)}>
+                <li className="mobile-only">
+                    <Link to="/book-a-call" className='navbar-button-mv' onClick={() => setMenuOpen(false)}>
                         Book a Call
                     </Link>
                 </li>

@@ -88,7 +88,7 @@ const BookACall = () => {
 	return (
 		<div className="book-a-call">
 			<div className="book-a-call-header">
-				<h2>
+			<h2>
 					Let us know <br />
 					about your idea
 				</h2>
@@ -97,6 +97,8 @@ const BookACall = () => {
 				</p>
 			</div>
 			<form className="form-container" onSubmit={handleSubmit}>
+			
+				
 				<div className="row">
 					<span>Name</span>
 					<input
@@ -107,7 +109,7 @@ const BookACall = () => {
 							handleInputChange();
 						}}
 						className={`form-input ${errors.name ? 'error' : ''}`}
-						required
+						// required
 					/>
 					{errors.name && (
 						<small className="error-message">{errors.name}</small>
@@ -124,7 +126,7 @@ const BookACall = () => {
 							handleInputChange();
 						}}
 						className={`form-input ${errors.email ? 'error' : ''}`}
-						required
+						// required
 					/>
 					{errors.email && (
 						<small className="error-message">{errors.email}</small>
@@ -139,7 +141,7 @@ const BookACall = () => {
 							value={companyName}
 							onChange={(e) => setCompanyName(e.target.value)}
 							className={`form-input ${errors.companyName ? 'error' : ''}`}
-							required
+							// required
 						/>
 						{errors.companyName && (
 							<small className="error-message">{errors.companyName}</small>
@@ -160,7 +162,7 @@ const BookACall = () => {
 							value={servicesRequired}
 							onChange={(e) => setServicesRequired(e.target.value)}
 							className={`form-input ${errors.servicesRequired ? 'error' : ''}`}
-							required
+							// required
 						>
 							<option value="">Select Service</option>
 							<option value="design">Design</option>
@@ -177,7 +179,7 @@ const BookACall = () => {
 							value={budget}
 							onChange={(e) => setBudget(e.target.value)}
 							className={`form-input ${errors.budget ? 'error' : ''}`}
-							required
+							// required
 						>
 							<option value="">Select Budget</option>
 							<option value="under_5k">Under $5k</option>
