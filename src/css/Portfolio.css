@@ -44,3 +44,119 @@
     padding-right: 10rem;
     text-align: justify;
 }
+
+
+@media (max-width: 479px) {
+    .portfolio-container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .portfolio-container h2 {
+        text-align: center;
+    }
+
+    .portfolio-container p {
+        text-align: center;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .project-card img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .card-right span {
+        text-align: center;
+    }
+
+    .card-right p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .portfolio-container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .portfolio-container h2 {
+        text-align: center;
+    }
+
+    .portfolio-container p {
+        text-align: center;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .project-card img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .card-right span {
+        text-align: center;
+    }
+
+    .card-right p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .portfolio-container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .portfolio-container h2 {
+        text-align: center;
+    }
+
+    .portfolio-container p {
+        text-align: center;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-card img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .card-right span {
+        text-align: center;
+    }
+
+    .card-right p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .card-right p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

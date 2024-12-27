@@ -4,6 +4,7 @@ import '../css/AboutUs.css';
 import komuthu from '../assets/komuthu.jpg';
 import dinura from '../assets/Dinura.jpg';
 import hirusha from '../assets/hirusha.jpg';
+import kavishi from '../assets/kavishi.jpg';
 
 
 const AboutUs = () => {
@@ -110,7 +111,7 @@ const AboutUs = () => {
                         </div>
 
                         <div className="team-member">
-                            <img src="https://i.imgur.com/6Q7Q7eK.jpg" />
+                            <img src={kavishi} />
                             <span>Kavishi Sirisena</span>
                             <span>Designer & Developer</span>
                         </div>

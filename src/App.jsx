@@ -15,10 +15,17 @@ import Navbar from './components/Navbar';
 
 import './index.css';
 
+import Snowfall from 'react-snowfall';
+
 function App() {
   return (
     <Router>
       <Navbar />
+      {/* <Snowfall 
+        snowflakeCount={100} 
+        style={{ position: 'absolute', top: 0, left: 0, zIndex: 999 }} 
+        snowflakeSpeed={0.1} 
+      /> */}
       <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/services" element={<Service />} />

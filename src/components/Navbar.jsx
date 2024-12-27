@@ -1,36 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../css/Navbar.css';
-import sparkhausLogo from '../assets/sparkhaus-Horizontal1.png';
+import sparkhausLogo from '../assets/sparkhaus-Horizontal2.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [closing, setClosing] = useState(false);
     const navRef = useRef();
 
     const toggleMenu = () => {
-        if (menuOpen) {
-            closeMenu();
-        } else {
-            setMenuOpen(true);
-        }
-    };
-
-    const closeMenu = () => {
-        setClosing(true);
-        setTimeout(() => {
-            setClosing(false);
-            setMenuOpen(false);
-        }, 300); // Delay to match the height transition duration
-    };
-
-    const handleLinkClick = () => {
-        if (menuOpen) closeMenu();
+        setMenuOpen((prev) => !prev);
     };
 
     const handleOutsideClick = (e) => {
         if (menuOpen && navRef.current && !navRef.current.contains(e.target)) {
-            closeMenu();
+            setMenuOpen(false);
         }
     };
 
@@ -42,19 +25,11 @@ const Navbar = () => {
     }, [menuOpen]);
 
     return (
-        <nav className="navbar" ref={navRef}>
-            <Link
-                to="/"
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                }}
-            >
+        <nav className={`navbar ${menuOpen ? 'navbar-open' : ''}`}
+        ref={navRef}>
+            <Link to="/" className="navbar-logo-container">
                 <img src={sparkhausLogo} className="navbar-logo" alt="logo" />
             </Link>
-			<div className='mobile-only'>
-				<span></span>
-			</div>
             <div
                 className={`hamburger ${menuOpen ? 'active' : ''}`}
                 onClick={toggleMenu}
@@ -62,33 +37,33 @@ const Navbar = () => {
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>		
+            </div>
             <ul
-                className={`navbar-links ${menuOpen ? 'active' : closing ? 'closing' : ''}`}
+                className={`navbar-links ${menuOpen ? 'active' : ''}`}
             >
                 <li className="navbar-item">
-                    <Link to="/services" onClick={handleLinkClick}>
+                    <Link to="/services" onClick={() => setMenuOpen(false)}>
                         Services
                     </Link>
                 </li>
                 <li className="navbar-item">
-                    <Link to="/about-us" onClick={handleLinkClick}>
+                    <Link to="/about-us" onClick={() => setMenuOpen(false)}>
                         About
                     </Link>
                 </li>
                 <li className="navbar-item">
-                    <Link to="/portfolio" onClick={handleLinkClick}>
+                    <Link to="/portfolio" onClick={() => setMenuOpen(false)}>
                         Portfolio
                     </Link>
                 </li>
-                <li className="navbar-item mobile-only">
-                    <Link to="/book-a-call" onClick={handleLinkClick}>
+                <li className="mobile-only">
+                    <Link to="/book-a-call" className='navbar-button-mv' onClick={() => setMenuOpen(false)}>
                         Book a Call
                     </Link>
                 </li>
             </ul>
-            <Link to="/book-a-call" className="desktop-only">
-                <div className="navbar-button">BOOK A CALL</div>
+            <Link to="/book-a-call" className="desktop-only navbar-button">
+                BOOK A CALL
             </Link>
         </nav>
     );
