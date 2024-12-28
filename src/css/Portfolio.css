@@ -37,6 +37,7 @@
 
 .card-right span {
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .card-right p {
@@ -158,5 +159,12 @@
     .card-right p {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .card-right p {
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 }
