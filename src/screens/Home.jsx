@@ -39,18 +39,18 @@ const Home = () => {
       <section className="services">
         <h2>Services</h2>
         <div className="d-grid gap-3">
-            <button className="btn btn-outline-light">
-                Web Design & Development 
-                <img src={topRightIcon} alt="arrow icon" className="icon" />
-            </button>
-            <button className="btn btn-outline-light">
-                Branding 
-                <img src={topRightIcon} alt="arrow icon" className="icon" />
-            </button>
-            <button className="btn btn-outline-light">
-                Social Media Management 
-                <img src={topRightIcon} alt="arrow icon" className="icon" />
-            </button>
+          <button className="btn btn-outline-light">
+            <span className="text">Web Design & Development</span>
+            <img src={topRightIcon} alt="arrow icon" className="icon" />
+          </button>
+          <button className="btn btn-outline-light">
+            <span className="text">Branding</span>
+            <img src={topRightIcon} alt="arrow icon" className="icon" />
+          </button>
+          <button className="btn btn-outline-light">
+            <span className="text">Social Media Management</span>
+            <img src={topRightIcon} alt="arrow icon" className="icon" />
+          </button>
         </div>
     </section>
 
