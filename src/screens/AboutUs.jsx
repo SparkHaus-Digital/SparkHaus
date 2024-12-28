@@ -26,6 +26,7 @@ const AboutUs = () => {
 		if (sectionRef.current) {
 			observer.observe(sectionRef.current);
 		}
+		window.scrollTo(0, 0);
 	}, []);
 
 	const formatNumber = (value) => value.toString().padStart(2, '0');

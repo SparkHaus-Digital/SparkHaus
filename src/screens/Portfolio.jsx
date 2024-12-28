@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import '../css/Portfolio.css';
 import es from '../assets/es-project-image.webp';
 import dob from '../assets/dob-project-image.webp';
 
 const Portfolio = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
 
     return(
         <div className="portfolio-container">
