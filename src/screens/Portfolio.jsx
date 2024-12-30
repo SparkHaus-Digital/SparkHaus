@@ -20,7 +20,7 @@ const Portfolio = () => {
                     <div className="card-right">
                         <h3>DOCTOR OF BAT</h3>
                         <span>UI/UX Design | Development | Content Management</span>
-                        c
+                        <p>The client wanted to explore the digital landscape and establish a presence online without committing to an online shop just yet. We designed a simple yet functional website that effectively showcased their services and reflected their brand identity. It provided a solid foundation for them to engage with their audience and gain confidence in the web space.</p>
                     </div>
                 </div>
 

@@ -9,10 +9,8 @@
   margin-top: 10rem;
 }
 
-
-
 .service-hero p {
-  max-width: 800px;
+  max-width: 1200px;
   font-size: 1rem;
 }
 
@@ -20,11 +18,13 @@
 .service-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid #ffffff48;
-  border-radius: 20px;
+  border-radius: 32px;
   padding: 4rem;
   margin: 12rem auto;
   min-height: 400px;
   transition: all 0.8s ease-in-out;
+  margin-left: 2rem;
+  margin-right: 2rem;
   
 }
 
@@ -34,7 +34,7 @@
 
 .service-card h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .service-details h4 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #fff;
   margin: 0;
   text-transform: uppercase;
@@ -72,8 +72,8 @@
 .service-card-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .service-card-footer :first-child {

@@ -33,11 +33,12 @@ const Home = () => {
 				<h2>Showcase</h2>
 				<p>Crafting Digital Success Stories, One Project at a Time</p>
 				<div className="showcase-card">
-					<div className="project-image"></div>
+					<div className="project-image">
+						<img src={dob} alt="project-image" />
+					</div>
 					<div className="project-info">
-						<span>UI/UX Design | Development | Content Management</span>
 						<h3>Doctor of Bat</h3>
-						<p>The client wanted to explore the digital landscape and establish a presence online without committing to an online shop just yet. We designed a simple yet functional website that effectively showcased their services and reflected their brand identity. It provided a solid foundation for them to engage with their audience and gain confidence in the web space.</p>
+						<span>Cricket Bat Repair Shop</span>
 					</div>
 				</div>
 			</section>
@@ -45,7 +46,7 @@ const Home = () => {
 			{/* Services Section */}
 			<section className="services">
 				<h2>Services</h2>
-				<div className="d-grid gap-3">
+				<div className="buttons-container">
 					<button className="btn btn-outline-light">
 						<span className="text">Web Design & Development</span>
 						<img src={topRightIcon} alt="arrow icon" className="icon" />
