@@ -1,3 +1,4 @@
+
 * {
   margin: 0;  padding: 0;
 
@@ -20,7 +21,7 @@ body {
   /* Radial glowing effect */
   /* background: 
     radial-gradient(circle 900px at right, #0e2686,  transparent 60%), 
-    radial-gradient(circle 900px at bottom left, #c0c0c09d, transparent 70%); */
+    radial-gradient(circle 900px at bottom left, #c0c0c09d, transparent 70%);  */
 
   background: 
     radial-gradient(circle 1000px at 100% 10%, #0e2686,  transparent 60%),
@@ -107,10 +108,11 @@ button {
   font-family: 'Bebas Neue', sans-serif;
 }
 
-/* h1 {
-  font-size: 3rem;
+h1 {
+  font-size: 6rem;
   font-weight: normal;
-} */
+  line-height: 6rem;
+}
 
 h2 {
   font-size: 4rem; 

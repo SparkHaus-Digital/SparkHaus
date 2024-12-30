@@ -1,0 +1,144 @@
+.service-container {
+  color: #fff;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+/* Hero Section */
+.service-hero {
+  margin-top: 10rem;
+}
+
+
+
+.service-hero p {
+  max-width: 800px;
+  font-size: 1rem;
+}
+
+/* Service Cards */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ffffff48;
+  border-radius: 20px;
+  padding: 4rem;
+  margin: 12rem auto;
+  min-height: 400px;
+  transition: all 0.8s ease-in-out;
+  
+}
+
+.service-card:hover {
+  background: linear-gradient(to top right, transparent, #e0dddd36);
+}
+
+.service-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.service-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.service-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-details h4 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.service-details p {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 0;
+}
+
+.service-card-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.service-card-footer :first-child {
+  text-align: right;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+
+  .service-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .service-hero {
+    padding: 5rem 1rem;
+  }
+
+  .service-hero  h2 {
+    text-align: center;
+  }
+
+  .service-hero p {
+    text-align: justify;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+    margin: 12rem auto;
+    text-align: center;
+    width: 240px;
+    /* height: 1000px; */
+  }
+
+  
+
+  .service-details {
+    grid-template-columns: 1fr; /* Stack items */
+    gap: 1rem;
+  }
+
+  .service-details div {
+    margin-bottom: 1rem; /* Add spacing between items */
+  }
+
+  .service-hero h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .service-hero p {
+    text-align: justify;
+    font-size: 0.9rem;
+    padding: 2rem 0rem;
+  }
+  
+  .service-card-footer { 
+    grid-template-columns: 1fr; /* Stack items */
+  }
+
+  .service-card-footer :first-child {
+    text-align: center;
+  }
+
+  .service-card-footer :last-child {
+    text-align: center;
+  }
+}
