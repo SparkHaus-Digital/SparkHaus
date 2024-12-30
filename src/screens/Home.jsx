@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../css/Home.css';
 import topRightIcon from '../assets/top-right.png';
 import topArrow from '../assets/top-right.png';
+import dob from '../assets/DoB-Website-Element.webp';
 
 const Home = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
+
 	return (
 		<div className="home-container">
 			{/* Main Section */}
@@ -30,8 +35,9 @@ const Home = () => {
 				<div className="showcase-card">
 					<div className="project-image"></div>
 					<div className="project-info">
-						<span>Website</span>
-            <h3>Doctor of Bat</h3>
+						<span>UI/UX Design | Development | Content Management</span>
+						<h3>Doctor of Bat</h3>
+						<p>The client wanted to explore the digital landscape and establish a presence online without committing to an online shop just yet. We designed a simple yet functional website that effectively showcased their services and reflected their brand identity. It provided a solid foundation for them to engage with their audience and gain confidence in the web space.</p>
 					</div>
 				</div>
 			</section>

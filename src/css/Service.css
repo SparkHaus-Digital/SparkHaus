@@ -80,6 +80,10 @@
   text-align: right;
 }
 
+.service-card-footer :last-child {
+  text-align: left;
+}
+
 /* Responsive for Mobile */
 @media (max-width: 768px) {
 

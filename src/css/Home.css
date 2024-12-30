@@ -91,7 +91,8 @@
 .project-image {
   flex: 2;
   height: 375px;
-  background: #000000;
+  background-image: url('../assets/DoB-Website-Element.webp');
+  background-size: cover;
   border-radius: 20px;
   border: 1px solid #ffffff48;
   margin-left: 2rem;
@@ -109,13 +110,20 @@
 .project-info h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin: 2rem 0rem 1rem 2rem;
+  margin-top: 2rem
 }
 
 .project-info span {
   font-size: 1rem;
   color: #ccc;
-  margin: 0rem 0rem 0rem 2rem;
+  text-align: center;
+}
+
+.project-info p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: justify;
+    margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
