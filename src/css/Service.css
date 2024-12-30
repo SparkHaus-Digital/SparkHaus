@@ -1,20 +1,15 @@
 .service-container {
-  font-family: 'Oswald', sans-serif;
   color: #fff;
-  padding: 0 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 
 /* Hero Section */
 .service-hero {
-  text-align: left;
-  padding: 5rem 1rem 5rem 15rem;
+  margin-top: 10rem;
 }
 
-.service-hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
+
 
 .service-hero p {
   max-width: 800px;
@@ -28,14 +23,13 @@
   border-radius: 20px;
   padding: 4rem;
   margin: 12rem auto;
-  width: 1200px;
   min-height: 400px;
+  transition: all 0.8s ease-in-out;
   
 }
 
 .service-card:hover {
-  transition: background 0.5s ease-in-out;
-  background: linear-gradient(to top right, #22222267, #e0dddd50);
+  background: linear-gradient(to top right, transparent, #e0dddd36);
 }
 
 .service-card h2 {
@@ -75,12 +69,37 @@
   margin: 0;
 }
 
+.service-card-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.service-card-footer :first-child {
+  text-align: right;
+}
+
 /* Responsive for Mobile */
 @media (max-width: 768px) {
 
-  .service-hero{
+  .service-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .service-hero {
     padding: 5rem 1rem;
   }
+
+  .service-hero  h2 {
+    text-align: center;
+  }
+
+  .service-hero p {
+    text-align: justify;
+  }
+
   .service-card {
     padding: 1.5rem;
     margin: 12rem auto;
@@ -89,16 +108,7 @@
     /* height: 1000px; */
   }
 
-  .service-card h2 {
-    font-size: 1.8rem;
-    
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-    text-align: center;
-    
-  }
+  
 
   .service-details {
     grid-template-columns: 1fr; /* Stack items */
@@ -115,8 +125,20 @@
   }
 
   .service-hero p {
-    text-align: center;
+    text-align: justify;
     font-size: 0.9rem;
     padding: 2rem 0rem;
+  }
+  
+  .service-card-footer { 
+    grid-template-columns: 1fr; /* Stack items */
+  }
+
+  .service-card-footer :first-child {
+    text-align: center;
+  }
+
+  .service-card-footer :last-child {
+    text-align: center;
   }
 }

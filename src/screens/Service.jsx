@@ -9,7 +9,7 @@ const Service = () => {
 
       {/* Hero Section */}
       <section className="service-hero">
-        <h1>OUR EXPERTISE<br />YOUR ARSENAL</h1>
+        <h2>OUR EXPERTISE<br />YOUR ARSENAL</h2>
         <p>
           At Sparkhaus, we equip you with the tools to succeed in a competitive digital landscape. 
           Whether it’s crafting a stunning website, designing a memorable brand identity, or 
@@ -52,6 +52,10 @@ const Service = () => {
             <p>Support for post-launch issues starting the first month</p>
           </div>
         </div>
+        <div className="service-card-footer">
+        <p>Starts at USD 350</p>
+        <p>More Details</p>
+      </div>
       </section>
 
       {/* Branding Section */}
@@ -87,6 +91,10 @@ const Service = () => {
             <p>Unique packaging to enhance product appeal</p>
           </div>
         </div>
+        <div className="service-card-footer">
+        <p>Starts at USD 120</p>
+        <p>More Details</p>
+      </div>
       </section>
 
       {/* Social Media Management */}
@@ -122,6 +130,10 @@ const Service = () => {
             <p>Develop compelling scripts for storytelling</p>
           </div>
         </div>
+        <div className="service-card-footer">
+        <p>Starts at USD 35/month</p>
+        <p>More Details</p>
+      </div>
       </section>
 
       

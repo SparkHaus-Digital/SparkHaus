@@ -1,7 +1,8 @@
 .home-container {
-  font-family: 'Oswald', sans-serif;
   color: #fff;
   padding: 0 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
 }  
   
   .main-section {
@@ -19,30 +20,6 @@
     color: #fff;
   }
   
-
-/* .start-project {
-  display: inline-block;
-  padding: 5px 15px;
-  margin-top: 20px;
-  background-color: #ffffff;
-  color: #000000;
-  border: none;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 1px solid white;
-}
-
-.start-project:hover {
-  color: white;
-  background-color: transparent;
-  border: 1px solid white;
-}
-
-.start-project:hover .arrow {
-  content: url('../assets/right-arrow.png');
-  
-} */
 
 .start-project {
   display: inline-block;
@@ -77,14 +54,12 @@
 .showcase {
     text-align: center;
     padding: 0rem 1rem;
-    
     margin: 0 auto;
   }
   
   .showcase h2 {
     text-transform: uppercase;
     margin-bottom: 2rem;
-    color: #fff;
   }
   
   .showcase p {
@@ -96,23 +71,19 @@
  /* Showcase Card */
 .showcase-card {
   display: flex;
-  align-items: relative;
-  transition: background 0.5s ease-in-out;
-  background: #22222267; /* Dark background for the card */
+  background: #22222267;
   border-radius: 20px;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 0 auto;
-  min-width: 1164px;
-  height: 503px;
   border: 1px solid #ffffff48;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  overflow: hidden; /* Ensures content stays within the card */
+  overflow: hidden; 
+  transition: all 0.8s ease-in-out; 
   
 }
 
 .showcase-card:hover {
-  transition: background 0.5s ease-in-out;
-  background: linear-gradient(to top right, #22222267, #e0dddd50);
+  background: linear-gradient(to top right, transparent, #e0dddd50);
 }
 
 
@@ -123,17 +94,16 @@
   background: #000000;
   border-radius: 20px;
   border: 1px solid #ffffff48;
-  margin: auto 60px;
+  margin-left: 2rem;
+  margin-right: 2rem;
   
 }
 
-/* Text Section */
+
 .project-info {
-  flex: 1; /* Occupies 1/3 of the card width */
+  flex: 1; 
   color: #fff;
-  text-align: left;
-  margin: 60px auto;
-  padding-left: 100px;
+  text-align: center;
 }
 
 .project-info h3 {
@@ -149,6 +119,20 @@
 }
 
 @media (max-width: 768px) {
+  .home-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .main-section {
+    padding-top: 8rem;
+  }
+
+  .main-title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
   .showcase-card {
     flex-direction: column; 
     height: auto; 
