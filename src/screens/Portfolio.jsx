@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import '../css/Portfolio.css';
-import es from '../assets/es-project-image.webp';
-import dob from '../assets/dob-project-image.webp';
+import es from '../assets/ES-Website-Element.png';
+import dob from '../assets/DoB-Website-Element.png';
 
 const Portfolio = () => {
     useEffect(() => {
