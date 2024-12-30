@@ -79,12 +79,13 @@
 
 
 .form-input.error {
-	border: 1px solid rgb(182, 8, 8);
+	border: 1px solid #9c2c2c;
   }
   
 .error-message {
-	color: rgb(115, 4, 4);
+	color: #d14949;
 	font-size: 0.8rem;
+	font-family: 'Syne', sans-serif;
 	/* margin-top: 5px; */
 }
 

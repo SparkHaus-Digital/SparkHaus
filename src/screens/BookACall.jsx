@@ -13,12 +13,12 @@ const BookACall = () => {
 	const [isDetailsVisible, setDetailsVisible] = useState(false);
 	const [errors, setErrors] = useState({});
 
-	const handleInputChange = () => {
-		if (name.trim() !== '' && email.trim() !== '') {
-			setDetailsVisible(true);
-		} else {
-			setDetailsVisible(false);
+	const handleInputChange = (field, value) => {
+		const newErrors = { ...errors };
+		if (value.trim() !== '') {
+			delete newErrors[field];
 		}
+		setErrors(newErrors);
 	};
 
 	useEffect(() => {
@@ -88,7 +88,7 @@ const BookACall = () => {
 	return (
 		<div className="book-a-call">
 			<div className="book-a-call-header">
-			<h2>
+				<h2>
 					Let us know <br />
 					about your idea
 				</h2>
@@ -97,8 +97,6 @@ const BookACall = () => {
 				</p>
 			</div>
 			<form className="form-container" onSubmit={handleSubmit}>
-			
-				
 				<div className="row">
 					<span>Name</span>
 					<input
@@ -106,14 +104,11 @@ const BookACall = () => {
 						value={name}
 						onChange={(e) => {
 							setName(e.target.value);
-							handleInputChange();
+							handleInputChange('name', e.target.value);
 						}}
 						className={`form-input ${errors.name ? 'error' : ''}`}
-						// required
 					/>
-					{errors.name && (
-						<small className="error-message">{errors.name}</small>
-					)}
+					{errors.name && <small className="error-message">{errors.name}</small>}
 				</div>
 
 				<div className="row">
@@ -123,14 +118,11 @@ const BookACall = () => {
 						value={email}
 						onChange={(e) => {
 							setEmail(e.target.value);
-							handleInputChange();
+							handleInputChange('email', e.target.value);
 						}}
 						className={`form-input ${errors.email ? 'error' : ''}`}
-						// required
 					/>
-					{errors.email && (
-						<small className="error-message">{errors.email}</small>
-					)}
+					{errors.email && <small className="error-message">{errors.email}</small>}
 				</div>
 
 				<div className={`additional-fields ${isDetailsVisible ? 'show' : ''}`}>
@@ -139,9 +131,11 @@ const BookACall = () => {
 						<input
 							type="text"
 							value={companyName}
-							onChange={(e) => setCompanyName(e.target.value)}
+							onChange={(e) => {
+								setCompanyName(e.target.value);
+								handleInputChange('companyName', e.target.value);
+							}}
 							className={`form-input ${errors.companyName ? 'error' : ''}`}
-							// required
 						/>
 						{errors.companyName && (
 							<small className="error-message">{errors.companyName}</small>
@@ -160,31 +154,39 @@ const BookACall = () => {
 						<span>Services Required</span>
 						<select
 							value={servicesRequired}
-							onChange={(e) => setServicesRequired(e.target.value)}
+							onChange={(e) => {
+								setServicesRequired(e.target.value);
+								handleInputChange('servicesRequired', e.target.value);
+							}}
 							className={`form-input ${errors.servicesRequired ? 'error' : ''}`}
-							// required
 						>
 							<option value="">Select Service</option>
-							<option value="design">Design</option>
-							<option value="development">Development</option>
-							<option value="marketing">Marketing</option>
+							<option value="Website">Website</option>
+							<option value="Branding">Branding</option>
+							<option value="Social Media Management">
+								Social Media Management
+							</option>
 						</select>
 						{errors.servicesRequired && (
-							<small className="error-message">{errors.servicesRequired}</small>
+							<small className="error-message">
+								{errors.servicesRequired}
+							</small>
 						)}
 					</div>
 					<div className="row">
 						<span>Budget</span>
 						<select
 							value={budget}
-							onChange={(e) => setBudget(e.target.value)}
+							onChange={(e) => {
+								setBudget(e.target.value);
+								handleInputChange('budget', e.target.value);
+							}}
 							className={`form-input ${errors.budget ? 'error' : ''}`}
-							// required
 						>
 							<option value="">Select Budget</option>
-							<option value="under_5k">Under $5k</option>
-							<option value="5k_10k">$5k - $10k</option>
-							<option value="over_10k">Over $10k</option>
+							<option value="USD 0 - USD 350">USD 0 - USD 350</option>
+							<option value="USD 350 - USD 1000">USD 350 - USD 1000</option>
+							<option value="USD 1000+">USD 1000 +</option>
 						</select>
 						{errors.budget && (
 							<small className="error-message">{errors.budget}</small>
