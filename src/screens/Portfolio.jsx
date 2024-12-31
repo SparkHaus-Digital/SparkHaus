@@ -27,9 +27,9 @@ const Portfolio = () => {
                 <div className="project-card">
                     <img src={es} alt="Project Image 2" />
                     <div className="card-right">
-                        <h3>DOCTOR OF BAT</h3>
+                        <h3>Earndeck Shipping</h3>
                         <span>UI/UX Design | Development | Content Management</span>
-                        <p>The client wanted to explore the digital landscape and establish a presence online without committing to an online shop just yet. We designed a simple yet functional website that effectively showcased their services and reflected their brand identity. It provided a solid foundation for them to engage with their audience and gain confidence in the web space.</p>
+                        <p>The client sought a website to establish a digital presence that showcased their work and the services they offer. They also wanted to highlight how they can help and engage with their audience, providing avenues for feedback and career opportunities. We crafted a professional yet approachable platform that reflects their identity, connects with their audience, and serves as a hub for interaction and growth.</p>
                     </div>
                 </div>
             </div>
