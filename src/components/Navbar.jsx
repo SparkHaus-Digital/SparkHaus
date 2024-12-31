@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../css/Navbar.css';
-import sparkhausLogo from '../assets/sparkhaus.png';
+// import sparkhausLogo from '../assets/sparkhaus.png';
+import logo from '/images/Sparkhaus.png';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
             ref={navRef}
         >
             <Link to="/" className="navbar-logo-container">
-                <img src={sparkhausLogo} className="navbar-logo" alt="logo" />
+                <img src={logo} className="navbar-logo" alt="logo" />
             </Link>
             <div
                 className={`hamburger ${menuOpen ? 'active' : ''}`}
