@@ -51,7 +51,7 @@ const Error = () => {
 					<Link to="/">
 						<center>
 							<div className="footer-button" style={{ maxWidth: '120px' }}>
-								GET IN TOUCH
+								GO TO HOME PAGE
 								<img src={topArrow} alt="arrow" className="arrow" />
 							</div>
 						</center>
