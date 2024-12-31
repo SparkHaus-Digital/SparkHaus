@@ -16,7 +16,6 @@ import Portfolio from './screens/Portfolio';
 import Navbar from './components/Navbar';
 
 import './index.css';
-
 import Snowfall from 'react-snowfall';
 
 function App() {
