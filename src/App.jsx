@@ -27,9 +27,9 @@ function App() {
         snowflakeSpeed={0.1} 
       /> */}
       <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/services" element={<Service />} />
-      <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/404" element={<Error />} />
         <Route path="*" element={<Navigate to="/404" />} />
         <Route path='/book-a-call' element={<BookACall/>} /> 

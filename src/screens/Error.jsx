@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import '../css/ComingSoon.css';
+import topArrow from '../assets/top-right.png';
 
 const Error = () => {
 	const ref = useRef(null);
@@ -42,13 +43,18 @@ const Error = () => {
 					Page not found
 				</motion.span>
 
-				<motion.p  variants={textAnimation}>
+				<motion.p variants={textAnimation}>
 					This page does not exist or it was removed.
 				</motion.p>
 
 				<motion.div variants={textAnimation}>
 					<Link to="/">
-						<button>VISIT HOME</button>
+						<center>
+							<div className="footer-button" style={{ maxWidth: '120px' }}>
+								GET IN TOUCH
+								<img src={topArrow} alt="arrow" className="arrow" />
+							</div>
+						</center>
 					</Link>
 				</motion.div>
 			</motion.div>
