@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../css/Navbar.css';
-import sparkhausLogo from '../assets/sparkhaus-Horizontal2.png';
+import sparkhausLogo from '../assets/sparkhaus.png';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
