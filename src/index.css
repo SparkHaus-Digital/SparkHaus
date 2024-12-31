@@ -135,10 +135,27 @@ h4 {
 @media (max-width: 479px) {
   body {
     background: 
-    radial-gradient(circle 600px at right, #0e2686e6,  transparent 60%), 
-    radial-gradient(circle 600px at bottom left, #c0c0c07b, transparent 50%);
+    /* radial-gradient(circle 600px at right, #0e2686e6,  transparent 60%), 
+    radial-gradient(circle 600px at bottom left, #c0c0c07b, transparent 50%); */
+    radial-gradient(circle 800px at 100% 10%, #0e2686,  transparent 60%),
+    radial-gradient(circle 600px at 0% 40%, #c0c0c09d,  transparent 60%),
+    radial-gradient(circle 600px at 100% 100%, #c0c0c09d,  transparent 60%),
+    radial-gradient(circle 700px at 0% 75%, #0e2686,  transparent 60%);
 
     background-color: black; 
+  }
+
+  body.book-a-call-page {
+    background: 
+    /* radial-gradient(circle 600px at right, #0e2686e6,  transparent 60%), 
+    radial-gradient(circle 600px at bottom left, #c0c0c07b, transparent 50%); */
+    radial-gradient(circle 800px at 100% 10%, #0e2686,  transparent 60%),
+    radial-gradient(circle 500px at 0% 40%, #c0c0c09d,  transparent 60%),
+    radial-gradient(circle 400px at 100% 100%, #c0c0c09d,  transparent 60%),
+    radial-gradient(circle 500px at 0% 80%, #0e2686,  transparent 60%);
+
+    background-color: black;
+    
   }
 
 

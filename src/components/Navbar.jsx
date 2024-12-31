@@ -31,7 +31,7 @@ const Navbar = () => {
             className={`navbar ${menuOpen ? 'navbar-open' : ''}`}
             ref={navRef}
         >
-            <Link to="/" className="navbar-logo-container">
+            <Link to="/" className="navbar-logo-container" onClick={() => setMenuOpen(false)}>
                 <img src={logo} className="navbar-logo" alt="logo" />
             </Link>
             <div

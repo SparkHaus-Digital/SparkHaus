@@ -22,6 +22,13 @@ const BookACall = () => {
 	};
 
 	useEffect(() => {
+		document.body.classList.add('book-a-call-page');
+		return () => {
+		  document.body.classList.remove('book-a-call-page');
+		};
+	  }, []);
+
+	useEffect(() => {
 		if (name.trim() !== '' && email.trim() !== '') {
 			setDetailsVisible(true);
 		}
@@ -193,7 +200,7 @@ const BookACall = () => {
 						)}
 					</div>
 
-					<button type="submit" className="submit-button fade-in">
+					<button type="submit" className="submit-button fade-in" style={{ fontWeight: 'normal' }}>
 						BOOK A CALL
 						<img src={topArrow} alt="arrow" className="arrow" />
 					</button>
