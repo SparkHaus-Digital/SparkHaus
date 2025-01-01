@@ -32,6 +32,7 @@ const Home = () => {
 			</section>
 
 			{/* Showcase Section */}
+			<Link to="/portfolio">
 			<section className="showcase">
 				<h2>Showcase</h2>
 				<p>Crafting Digital Success Stories, One Project at a Time</p>
@@ -45,6 +46,7 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
+			</Link>
 
 			{/* Services Section */}
 			<section className="services">
