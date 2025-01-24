@@ -4,8 +4,7 @@ import topArrow from '../assets/top-right.png';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaPhone } from 'react-icons/fa6';
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
@@ -16,37 +15,37 @@ const Footer = () => {
 			</h2>
 			<p className="contact-subheading">Something in mind? Hop on that call!</p>
 			<Link to="/book-a-call">
-			<div className="footer-button">
-				GET IN TOUCH
-				<img src={topArrow} alt="arrow" className="arrow" />
-			</div>
+				<div className="footer-button">
+					GET IN TOUCH
+					<img src={topArrow} alt="arrow" className="arrow" />
+				</div>
 			</Link>
 			<div className="contact-info">
 				<div className="email-div">
-					<a href='mailto:sparkhausdigital@gmail.com' className='email-subdiv'>
-					<MdEmail size={20} color="white" />
-					<span>sparkhausdigital@gmail.com</span>
+					<a href="mailto:info@sparkhausdigital.com" className="email-subdiv">
+						<MdEmail size={20} color="white" />
+						<span>info@sparkhausdigital.com</span>
 					</a>
 				</div>
 
 				<div className="icons-div">
-					<a 
-						href="https://www.facebook.com/profile.php?id=61566714766536" 
-						target="_blank" 
+					<a
+						href="https://www.facebook.com/profile.php?id=61566714766536"
+						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<FaFacebook size={20} color="white" />
 					</a>
-					<a 
-						href="https://www.linkedin.com/company/sparkhausdigital" 
-						target="_blank" 
+					<a
+						href="https://www.linkedin.com/company/sparkhausdigital"
+						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<FaInstagram size={20} color="white" />
 					</a>
-					<a 
-						href="https://www.instagram.com/__.sparkhaus.__/" 
-						target="_blank" 
+					<a
+						href="https://www.instagram.com/__.sparkhaus.__/"
+						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<FaLinkedin size={20} color="white" />
@@ -54,8 +53,15 @@ const Footer = () => {
 				</div>
 
 				<div className="contact-number-div">
-					<FaPhone size={20} color="white" />
-					<span>+94 777867920, +94 711631003</span>
+					<a
+						href="https://wa.me/message/FFKUH6PFAYF7L1"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="email-subdiv"
+					>
+						<FaPhone size={20} color="white" />
+						<span>+94 77 786 0369</span>
+					</a>
 				</div>
 			</div>
 		</section>

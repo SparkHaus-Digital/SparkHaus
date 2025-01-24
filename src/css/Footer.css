@@ -79,6 +79,9 @@
 	display: flex;
 	justify-content: right;
 	gap: 5px;
+	align-items: center;
+	align-self: center;
+	place-self: center;
 }
 
 @media (max-width: 479px) {
