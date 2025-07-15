@@ -44,6 +44,7 @@ body {
   pointer-events: none;
 } */
 
+
 /* Dot pattern for blue gradients */
 /* body::before {
   background-image: radial-gradient(circle, rgb(255, 255, 255) 1px, transparent 1px);
