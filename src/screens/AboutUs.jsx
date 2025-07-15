@@ -5,6 +5,9 @@ import komuthu from '../assets/komuthu.jpg';
 import dinura from '../assets/Dinura.jpg';
 import hirusha from '../assets/hirusha.jpg';
 import kavishi from '../assets/kavishi.jpg';
+import ishadi from '../assets/ishadi-tharushika.jpg';
+import thilan from '../assets/thilan.jpg';
+import raziya from '../assets/raziya-placeholder.png';
 
 
 const AboutUs = () => {
@@ -112,9 +115,21 @@ const AboutUs = () => {
                         </div>
 
                         <div className="team-member">
-                            <img src={kavishi} />
-                            <span>Kavishi Sirisena</span>
+                            <img src={ishadi} />
+                            <span>Ishadi Tharushika</span>
                             <span>Designer & Developer</span>
+                        </div>
+
+						<div className="team-member">
+                            <img src={thilan} />
+                            <span>Thilan Prasad</span>
+                            <span>Social Media Manager</span>
+                        </div>
+
+						<div className="team-member">
+                            <img src={raziya} />
+                            <span>Raziya Lareef</span>
+                            <span>Social Media Manager</span>
                         </div>
                     </div>
 
